@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rakesh | Data Analyst & Business Intelligence Specialist</title>
+  
+  <!-- SEO & Social Meta Tags -->
+  <meta name="description" content="Portfolio of Rakesh - Aspiring Data Analyst & Business Intelligence Developer specializing in Python, SQL, Power BI, and Financial Analytics.">
+  <meta name="keywords" content="Data Analyst, Business Intelligence, Power BI, Python, SQL, Finance Analytics, Portfolio, Chennai">
+  <meta name="author" content="Rakesh">
+  <meta property="og:title" content="Rakesh | Data Analyst Portfolio">
+  <meta property="og:description" content="Turning messy business and finance data into clear, actionable insights and automated dashboards.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rakesh-portfolio.dev">
+  <meta property="og:image" content="static/profile.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Rakesh | Data Analyst Portfolio">
+  <meta name="twitter:description" content="Turning messy business and finance data into clear, actionable insights.">
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+  
+  <!-- Google Fonts: Space Grotesk (Headings) & Inter (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Scroll Progress Indicator -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Background Canvas for Data Particles/Grid -->
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <!-- Ambient Glowing Blobs -->
+  <div class="blob blob-1" aria-hidden="true"></div>
+  <div class="blob blob-2" aria-hidden="true"></div>
+
+  <!-- Header / Navigation Bar -->
+  <header class="header" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="brand-logo" aria-label="Rakesh Portfolio Homepage">
+        <span class="logo-box">RK</span>
+        <span class="logo-text">Rakesh<span class="dot">.</span>analytics</span>
+      </a>
+
+      <!-- Desktop & Mobile Navigation Links -->
+      <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#hero" class="nav-link active">Home</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+          <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+          <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+          <li class="nav-item"><a href="#certifications" class="nav-link">Certs</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Buttons: Theme Toggle & Hire Me -->
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark/light theme" title="Toggle theme">
+          <i class="fa-solid fa-moon moon-icon"></i>
+          <i class="fa-solid fa-sun sun-icon"></i>
+        </button>
+        <a href="#contact" class="btn btn-sm btn-primary hire-me-btn">
+          <span>Hire Me</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open mobile menu">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content reveal-fade-up">
+          <div class="status-pill">
+            <span class="status-indicator"></span>
+            <span>Available for Internships & Projects</span>
+          </div>
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Rakesh</span>
+          </h1>
+          <div class="typing-container">
+            <span class="typing-prefix">I am a </span>
+            <span id="typing-text" class="typing-text"></span>
+            <span class="typing-cursor" aria-hidden="true">|</span>
+          </div>
+          <p class="hero-tagline">
+            "I turn messy business and finance data into clear insights and decisions."
+          </p>
+          <p class="hero-bio-short">
+            Aspiring Data Analyst blending rigorous commerce & financial accounting with cutting-edge analytical tools to reveal high-impact business narratives.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fa-solid fa-chart-line"></i>
+              <span>View Projects</span>
+            </a>
+            <a href="static/resume.pdf" download="Rakesh_Resume.pdf" class="btn btn-outline" id="download-resume-btn">
+              <i class="fa-solid fa-download"></i>
+              <span>Download Resume</span>
+            </a>
+            <a href="static/resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" title="Open resume in a new tab">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              <span>View Resume</span>
+            </a>
+          </div>
+
+          <div class="hero-socials">
+            <span class="socials-label">Connect:</span>
+            <a href="https://linkedin.com/in/rakesh-dummy" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-icon">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/rakesh-dummy" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social-icon">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://kaggle.com/rakeshdummy" target="_blank" rel="noopener noreferrer" aria-label="Kaggle" class="social-icon">
+              <i class="fa-brands fa-kaggle"></i>
+            </a>
+            <a href="https://x.com/rakesh_dummy" target="_blank" rel="noopener noreferrer" aria-label="Twitter/X" class="social-icon">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="https://instagram.com/rakesh.dummy" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-icon">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="mailto:rakesh.dummy@email.com" aria-label="Email" class="social-icon">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal-fade-up">
+          <div class="profile-card-wrapper">
+            <div class="glow-ring"></div>
+            <div class="profile-card">
+              <!-- Avatar with Graceful Fallback -->
+              <div class="avatar-container" id="avatar-container">
+                <img 
+                  src="static/profile.jpg" 
+                  alt="Rakesh - Data Analyst" 
+                  class="profile-img" 
+                  id="profile-img"
+                  loading="eager"
+                >
+                <div class="avatar-fallback" id="avatar-fallback" aria-hidden="true">
+                  <span>RK</span>
+                </div>
+              </div>
+
+              <!-- Floating Tech Badges -->
+              <div class="floating-badge badge-powerbi" data-float="subtle">
+                <i class="fa-solid fa-chart-pie"></i>
+                <div>
+                  <span class="badge-title">Power BI & SQL</span>
+                  <span class="badge-sub">Dashboards & ETL</span>
+                </div>
+              </div>
+
+              <div class="floating-badge badge-finance" data-float="reverse">
+                <i class="fa-solid fa-wallet"></i>
+                <div>
+                  <span class="badge-title">Finance & P&L</span>
+                  <span class="badge-sub">Automated Reporting</span>
+                </div>
+              </div>
+
+              <div class="floating-badge badge-python" data-float="subtle">
+                <i class="fa-brands fa-python"></i>
+                <div>
+                  <span class="badge-title">Python Analytics</span>
+                  <span class="badge-sub">Pandas • Scikit-Learn</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#about" class="scroll-down-indicator" aria-label="Scroll to About section">
+        <i class="fa-solid fa-chevron-down"></i>
+      </a>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header reveal-fade-up">
+          <span class="section-sub">Get To Know Me</span>
+          <h2 class="section-title">Bridging Financial Acumen & Data Science</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card glass-panel reveal-fade-up">
+            <div class="about-card-badge">
+              <i class="fa-solid fa-user-graduate"></i>
+              <span>Profile Story</span>
+            </div>
+            <h3 class="about-heading">Translating Complex Numbers into Strategic Wins</h3>
+            <p class="about-text">
+              I'm a second-year B.Com student at AMJAIN College, Chennai, with a strong foundation in accounting, finance and commerce, now building skills in data analytics. I enjoy turning raw numbers into dashboards and stories that help businesses decide better.
+            </p>
+            <p class="about-text">
+              Alongside my studies I handle accounting work for a gym partnership business, build startup ideas, and freelance. My goal is to grow into a communication-focused data consultant who explains complex data in simple language.
+            </p>
+
+            <div class="about-quick-facts">
+              <div class="fact-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                  <span class="fact-label">Location</span>
+                  <span class="fact-value">Chennai, Tamil Nadu, India</span>
+                </div>
+              </div>
+              <div class="fact-item">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <div>
+                  <span class="fact-label">Education</span>
+                  <span class="fact-value">B.Com (General), AMJAIN College</span>
+                </div>
+              </div>
+              <div class="fact-item">
+                <i class="fa-solid fa-briefcase"></i>
+                <div>
+                  <span class="fact-label">Availability</span>
+                  <span class="fact-value">Open for Internships & Freelance</span>
+                </div>
+              </div>
+              <div class="fact-item">
+                <i class="fa-solid fa-envelope-open-text"></i>
+                <div>
+                  <span class="fact-label">Email</span>
+                  <span class="fact-value">rakesh.dummy@email.com</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Animated Stat Counters -->
+          <div class="stats-container reveal-fade-up">
+            <div class="stat-card glass-panel">
+              <div class="stat-icon-wrap">
+                <i class="fa-solid fa-diagram-project"></i>
+              </div>
+              <div class="stat-number-wrap">
+                <span class="stat-number" data-target="8">0</span><span class="stat-plus">+</span>
+              </div>
+              <span class="stat-title">Real-World Projects</span>
+              <p class="stat-desc">End-to-end data pipelines, ML models & dashboards</p>
+            </div>
+
+            <div class="stat-card glass-panel">
+              <div class="stat-icon-wrap">
+                <i class="fa-solid fa-toolbox"></i>
+              </div>
+              <div class="stat-number-wrap">
+                <span class="stat-number" data-target="10">0</span><span class="stat-plus">+</span>
+              </div>
+              <span class="stat-title">Tools & Frameworks</span>
+              <p class="stat-desc">Power BI, Excel, SQL, Python, Pandas & Tally</p>
+            </div>
+
+            <div class="stat-card glass-panel">
+              <div class="stat-icon-wrap">
+                <i class="fa-solid fa-certificate"></i>
+              </div>
+              <div class="stat-number-wrap">
+                <span class="stat-number" data-target="4">0</span><span class="stat-plus">+</span>
+              </div>
+              <span class="stat-title">Certifications</span>
+              <p class="stat-desc">Google Data Analytics, SQL, PL-300 & Tally</p>
+            </div>
+
+            <div class="stat-card glass-panel">
+              <div class="stat-icon-wrap">
+                <i class="fa-solid fa-hourglass-half"></i>
+              </div>
+              <div class="stat-number-wrap">
+                <span class="stat-number" data-target="2">0</span><span class="stat-plus">+</span>
+              </div>
+              <span class="stat-title">Years Continuous Learning</span>
+              <p class="stat-desc">Deepening quantitative & business analytics</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-header reveal-fade-up">
+          <span class="section-sub">Technical & Domain Arsenal</span>
+          <h2 class="section-title">Skills & Capabilities</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Skill Card 1: Languages -->
+          <div class="skill-category-card glass-panel reveal-fade-up">
+            <div class="skill-card-header">
+              <div class="category-icon"><i class="fa-solid fa-code"></i></div>
+              <h3 class="category-title">Programming Languages</h3>
+            </div>
+            <div class="skill-bars-list">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Python</span>
+                  <span class="skill-pct">80%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-bar" data-progress="80"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">SQL</span>
+                  <span class="skill-pct">75%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-bar" data-progress="75"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">R</span>
+                  <span class="skill-pct">50%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-bar" data-progress="50"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tool-chips">
+              <span class="chip"><i class="fa-brands fa-python"></i> Python 3</span>
+              <span class="chip"><i class="fa-solid fa-database"></i> ANSI SQL</span>
+              <span class="chip"><i class="fa-solid fa-chart-simple"></i> RStudio</span>
+            </div>
+          </div>
+
+          <!-- Skill Card 2: Analysis & Visualization -->
+          <div class="skill-category-card glass-panel reveal-fade-up">
+            <div class="skill-card-header">
+              <div class="category-icon"><i class="fa-solid fa-chart-pie"></i></div>
+              <h3 class="category-title">Analysis & Visualization</h3>
+            </div>
+            <div class="skill-bars-list">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Excel (Advanced, VBA)</span>
+                  <span class="skill-pct">90%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-bar" data-progress="90"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Power BI (DAX, Modeling)</span>
+                  <span class="skill-pct">80%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-bar" data-progress="80"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Pandas / NumPy</span>
+                  <span class="skill-pct">75%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-bar" data-progress="75"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Tableau</span>
+                  <span class="skill-pct">70%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-bar" data-progress="70"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Matplotlib / Seaborn</span>
+                  <span class="skill-pct">70%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-bar" data-progress="70"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tool-chips">
+              <span class="chip"><i class="fa-solid fa-file-excel"></i> Power Query</span>
+              <span class="chip"><i class="fa-solid fa-chart-line"></i> DAX</span>
+              <span class="chip"><i class="fa-solid fa-cube"></i> Data Storytelling</span>
+            </div>
+          </div>
+
+          <!-- Skill Card 3: Databases -->
+          <div class="skill-category-card glass-panel reveal-fade-up">
+            <div class="skill-card-header">
+              <div class="category-icon"><i class="fa-solid fa-server"></i></div>
+              <h3 class="category-title">Databases & Storage</h3>
+            </div>
+            <div class="skill-bars-list">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Google Sheets (Formulas & Apps Script)</span>
+                  <span class="skill-pct">85%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-bar" data-progress="85"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">MySQL</span>
+                  <span class="skill-pct">70%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-bar" data-progress="70"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">PostgreSQL</span>
+                  <span class="skill-pct">60%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-bar" data-progress="60"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tool-chips">
+              <span class="chip"><i class="fa-solid fa-table"></i> Relational Schemas</span>
+              <span class="chip"><i class="fa-solid fa-bolt"></i> Window Functions</span>
+              <span class="chip"><i class="fa-solid fa-cloud"></i> Cloud DBs</span>
+            </div>
+          </div>
+
+          <!-- Skill Card 4: Finance & Business -->
+          <div class="skill-category-card glass-panel reveal-fade-up">
+            <div class="skill-card-header">
+              <div class="category-icon"><i class="fa-solid fa-coins"></i></div>
+              <h3 class="category-title">Finance & Business Analytics</h3>
+            </div>
+            <div class="skill-bars-list">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Trial Balance & Ledgers</span>
+                  <span class="skill-pct">90%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-bar" data-progress="90"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Financial Statements (P&L, Balance Sheet)</span>
+                  <span class="skill-pct">85%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-bar" data-progress="85"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Tally Prime</span>
+                  <span class="skill-pct">75%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-bar" data-progress="75"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Budgeting & Forecasting</span>
+                  <span class="skill-pct">70%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-bar" data-progress="70"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tool-chips">
+              <span class="chip"><i class="fa-solid fa-scale-balanced"></i> Ratio Analysis</span>
+              <span class="chip"><i class="fa-solid fa-calculator"></i> Variance Analysis</span>
+              <span class="chip"><i class="fa-solid fa-file-invoice-dollar"></i> Bookkeeping</span>
+            </div>
+          </div>
+
+          <!-- Skill Card 5: Soft Skills -->
+          <div class="skill-category-card glass-panel reveal-fade-up">
+            <div class="skill-card-header">
+              <div class="category-icon"><i class="fa-solid fa-users"></i></div>
+              <h3 class="category-title">Professional & Soft Skills</h3>
+            </div>
+            <div class="soft-skills-container">
+              <div class="soft-skill-badge">
+                <div class="soft-icon"><i class="fa-solid fa-comments"></i></div>
+                <div class="soft-text">
+                  <strong>Effective Communication</strong>
+                  <span>Explaining complex metrics in plain, executive-friendly language</span>
+                </div>
+              </div>
+              <div class="soft-skill-badge">
+                <div class="soft-icon"><i class="fa-solid fa-book-open-reader"></i></div>
+                <div class="soft-text">
+                  <strong>Storytelling with Data</strong>
+                  <span>Transforming static reports into dynamic narratives that inspire action</span>
+                </div>
+              </div>
+              <div class="soft-skill-badge">
+                <div class="soft-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                <div class="soft-text">
+                  <strong>Root-Cause Problem Solving</strong>
+                  <span>Investigating financial variances and identifying growth bottlenecks</span>
+                </div>
+              </div>
+              <div class="soft-skill-badge">
+                <div class="soft-icon"><i class="fa-solid fa-handshake"></i></div>
+                <div class="soft-text">
+                  <strong>Client & Stakeholder Handling</strong>
+                  <span>Translating business requirements into structured deliverables</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience & Education Section -->
+    <section class="section timeline-section" id="experience">
+      <div class="container">
+        <div class="section-header reveal-fade-up">
+          <span class="section-sub">Track Record & Learning</span>
+          <h2 class="section-title">Experience & Education</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="timeline-wrapper">
+          <!-- Timeline Item 1 -->
+          <div class="timeline-item reveal-fade-up">
+            <div class="timeline-dot"><i class="fa-solid fa-dumbbell"></i></div>
+            <div class="timeline-content glass-panel">
+              <div class="timeline-meta">
+                <span class="timeline-badge work">Work Experience</span>
+                <span class="timeline-date"><i class="fa-regular fa-calendar"></i> 2025 – Present</span>
+              </div>
+              <h3 class="timeline-role">Accounting & Data Associate <span class="tag-part-time">(Part-time)</span></h3>
+              <h4 class="timeline-org"><i class="fa-solid fa-building"></i> AlliedFit Gym (Partnership Firm)</h4>
+              <ul class="timeline-bullets">
+                <li>Maintain books of accounts, journal entries, trial balances, and periodic financial statements for the partnership firm.</li>
+                <li>Engineered automated Excel workbooks that streamlined monthly profit/loss and expense categorization, cutting manual reconciliation time.</li>
+                <li>Created dynamic visualization dashboards enabling partners to track membership revenue trends, active renewals, and seasonal sales dips.</li>
+              </ul>
+              <div class="timeline-tags">
+                <span class="tag">Excel VBA</span>
+                <span class="tag">Financial Statements</span>
+                <span class="tag">Revenue Analysis</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2 -->
+          <div class="timeline-item reveal-fade-up">
+            <div class="timeline-dot"><i class="fa-solid fa-rocket"></i></div>
+            <div class="timeline-content glass-panel">
+              <div class="timeline-meta">
+                <span class="timeline-badge startup">Startup Leadership</span>
+                <span class="timeline-date"><i class="fa-regular fa-calendar"></i> 2025 – Present</span>
+              </div>
+              <h3 class="timeline-role">Founder / Product Analyst</h3>
+              <h4 class="timeline-org"><i class="fa-solid fa-utensils"></i> Cruncit (Campus Food Ordering Startup)</h4>
+              <ul class="timeline-bullets">
+                <li>Researched high-density canteen ordering bottlenecks and peak wait times across multiple Chennai college campuses.</li>
+                <li>Aggregated and analyzed quantitative survey data to determine optimal feature sets, student spending limits, and commission models.</li>
+                <li>Designed high-converting landing page prototypes, collected user feedback, and measured cohort engagement signals.</li>
+              </ul>
+              <div class="timeline-tags">
+                <span class="tag">Market Research</span>
+                <span class="tag">User Analytics</span>
+                <span class="tag">Product Strategy</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 3 -->
+          <div class="timeline-item reveal-fade-up">
+            <div class="timeline-dot"><i class="fa-solid fa-laptop-code"></i></div>
+            <div class="timeline-content glass-panel">
+              <div class="timeline-meta">
+                <span class="timeline-badge freelance">Consulting</span>
+                <span class="timeline-date"><i class="fa-regular fa-calendar"></i> 2025 – Present</span>
+              </div>
+              <h3 class="timeline-role">Freelance Data & Spreadsheet Consultant</h3>
+              <h4 class="timeline-org"><i class="fa-solid fa-user-tie"></i> Self-employed</h4>
+              <ul class="timeline-bullets">
+                <li>Cleaned, standardized, and restructured raw customer and transaction datasets for regional small businesses and merchants.</li>
+                <li>Delivered high-impact Excel and Power BI executive dashboards accompanied by plain-language actionable takeaways.</li>
+                <li>Formulated automated audit checks to detect transaction discrepancies and ledger variances.</li>
+              </ul>
+              <div class="timeline-tags">
+                <span class="tag">Power BI</span>
+                <span class="tag">Data Wrangling</span>
+                <span class="tag">Client Reporting</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 4: Education -->
+          <div class="timeline-item reveal-fade-up">
+            <div class="timeline-dot education-dot"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div class="timeline-content glass-panel">
+              <div class="timeline-meta">
+                <span class="timeline-badge education">Education</span>
+                <span class="timeline-date"><i class="fa-regular fa-calendar"></i> 2024 – 2027 (Expected)</span>
+              </div>
+              <h3 class="timeline-role">Bachelor of Commerce - B.Com (General)</h3>
+              <h4 class="timeline-org"><i class="fa-solid fa-school"></i> AMJAIN College, Chennai</h4>
+              <ul class="timeline-bullets">
+                <li>Core studies in Corporate Accounting, Financial Management, Business Statistics, Auditing, and Commercial Law.</li>
+                <li>Connecting classical double-entry bookkeeping with contemporary computerized accounting systems and data modeling.</li>
+                <li>Active involvement in commerce club events, business problem-solving forums, and analytical hackathons.</li>
+              </ul>
+              <div class="timeline-tags">
+                <span class="tag">Accounting</span>
+                <span class="tag">Business Statistics</span>
+                <span class="tag">Financial Economics</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-header reveal-fade-up">
+          <span class="section-sub">Portfolio of Work</span>
+          <h2 class="section-title">Featured Projects</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="filter-controls reveal-fade-up" role="tablist" aria-label="Project filter categories">
+          <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All (6)</button>
+          <button class="filter-btn" data-filter="data-analysis" role="tab" aria-selected="false">Data Analysis</button>
+          <button class="filter-btn" data-filter="dashboards" role="tab" aria-selected="false">Dashboards</button>
+          <button class="filter-btn" data-filter="machine-learning" role="tab" aria-selected="false">Machine Learning</button>
+          <button class="filter-btn" data-filter="web" role="tab" aria-selected="false">Web</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid" id="projects-grid">
+          <!-- Project 1 -->
+          <article class="project-card glass-panel reveal-fade-up" data-category="dashboards" data-project-id="1">
+            <div class="project-thumbnail thumb-gradient-1">
+              <div class="thumb-watermark"><i class="fa-solid fa-chart-pie"></i></div>
+              <div class="thumb-badge">Power BI • Excel</div>
+              <div class="thumb-overlay">
+                <button class="btn btn-sm btn-light open-modal-btn" aria-label="View Gym Revenue Dashboard details">
+                  <i class="fa-solid fa-eye"></i> View Case Study
+                </button>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-category-tag">Dashboards</span>
+              <h3 class="project-title">Gym Revenue & Expense Dashboard</h3>
+              <p class="project-desc">
+                Interactive Power BI dashboard tracking monthly memberships, operational expenses, trainer payouts, and net profitability.
+              </p>
+              <div class="project-tech-tags">
+                <span>Power BI</span>
+                <span>Excel</span>
+                <span>DAX</span>
+                <span>Financial Modeling</span>
+              </div>
+              <div class="project-actions">
+                <a href="#" class="btn-project-link" target="_blank" rel="noopener noreferrer" title="View GitHub Repository">
+                  <i class="fa-brands fa-github"></i> Code
+                </a>
+                <a href="#" class="btn-project-link" target="_blank" rel="noopener noreferrer" title="View Live Interactive Demo">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </a>
+                <button class="btn-project-detail open-modal-btn" aria-label="Expand project details">
+                  <i class="fa-solid fa-circle-info"></i> Details
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card glass-panel reveal-fade-up" data-category="data-analysis" data-project-id="2">
+            <div class="project-thumbnail thumb-gradient-2">
+              <div class="thumb-watermark"><i class="fa-solid fa-chart-column"></i></div>
+              <div class="thumb-badge">Python • Pandas</div>
+              <div class="thumb-overlay">
+                <button class="btn btn-sm btn-light open-modal-btn" aria-label="View Canteen Demand Analysis details">
+                  <i class="fa-solid fa-eye"></i> View Case Study
+                </button>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-category-tag">Data Analysis</span>
+              <h3 class="project-title">Student Canteen Demand Analysis</h3>
+              <p class="project-desc">
+                Comprehensive survey analysis uncovering peak wait times, meal preferences, and price sensitivities among college students.
+              </p>
+              <div class="project-tech-tags">
+                <span>Python</span>
+                <span>Pandas</span>
+                <span>Matplotlib</span>
+                <span>Seaborn</span>
+              </div>
+              <div class="project-actions">
+                <a href="#" class="btn-project-link" target="_blank" rel="noopener noreferrer" title="View GitHub Repository">
+                  <i class="fa-brands fa-github"></i> Code
+                </a>
+                <a href="#" class="btn-project-link" target="_blank" rel="noopener noreferrer" title="View Live Interactive Demo">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </a>
+                <button class="btn-project-detail open-modal-btn" aria-label="Expand project details">
+                  <i class="fa-solid fa-circle-info"></i> Details
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card glass-panel reveal-fade-up" data-category="machine-learning" data-project-id="3">
+            <div class="project-thumbnail thumb-gradient-3">
+              <div class="thumb-watermark"><i class="fa-solid fa-brain"></i></div>
+              <div class="thumb-badge">Python • Scikit-Learn</div>
+              <div class="thumb-overlay">
+                <button class="btn btn-sm btn-light open-modal-btn" aria-label="View Sales Forecasting Model details">
+                  <i class="fa-solid fa-eye"></i> View Case Study
+                </button>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-category-tag">Machine Learning</span>
+              <h3 class="project-title">Sales Forecasting Model</h3>
+              <p class="project-desc">
+                Predictive regression model forecasting monthly retail revenue trends using historical patterns and seasonal feature engineering.
+              </p>
+              <div class="project-tech-tags">
+                <span>Python</span>
+                <span>Linear Regression</span>
+                <span>Scikit-Learn</span>
+                <span>NumPy</span>
+              </div>
+              <div class="project-actions">
+                <a href="#" class="btn-project-link" target="_blank" rel="noopener noreferrer" title="View GitHub Repository">
+                  <i class="fa-brands fa-github"></i> Code
+                </a>
+                <a href="#" class="btn-project-link" target="_blank" rel="noopener noreferrer" title="View Live Interactive Demo">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </a>
+                <button class="btn-project-detail open-modal-btn" aria-label="Expand project details">
+                  <i class="fa-solid fa-circle-info"></i> Details
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project-card glass-panel reveal-fade-up" data-category="data-analysis" data-project-id="4">
+            <div class="project-thumbnail thumb-gradient-4">
+              <div class="thumb-watermark"><i class="fa-solid fa-file-invoice"></i></div>
+              <div class="thumb-badge">Excel • VBA</div>
+              <div class="thumb-overlay">
+                <button class="btn btn-sm btn-light open-modal-btn" aria-label="View Financial Statement Analyzer details">
+                  <i class="fa-solid fa-eye"></i> View Case Study
+                </button>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-category-tag">Data Analysis</span>
+              <h3 class="project-title">Financial Statement Analyzer</h3>
+              <p class="project-desc">
+                Automated ratio analysis workbook computing liquidity, solvency, Dupont ROE breakdown, and margin trends across annual reports.
+              </p>
+              <div class="project-tech-tags">
+                <span>Advanced Excel</span>
+                <span>VBA Macros</span>
+                <span>Financial Ratios</span>
+                <span>DuPont Analysis</span>
+              </div>
+              <div class="project-actions">
+                <a href="#" class="btn-project-link" target="_blank" rel="noopener noreferrer" title="View GitHub Repository">
+                  <i class="fa-brands fa-github"></i> Code
+                </a>
+                <a href="#" class="btn-project-link" target="_blank" rel="noopener noreferrer" title="View Live Interactive Demo">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </a>
+                <button class="btn-project-detail open-modal-btn" aria-label="Expand project details">
+                  <i class="fa-solid fa-circle-info"></i> Details
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 5 -->
+          <article class="project-card glass-panel reveal-fade-up" data-category="machine-learning" data-project-id="5">
+            <div class="project-thumbnail thumb-gradient-5">
+              <div class="thumb-watermark"><i class="fa-solid fa-user-xmark"></i></div>
+              <div class="thumb-badge">Python • Classification</div>
+              <div class="thumb-overlay">
+                <button class="btn btn-sm btn-light open-modal-btn" aria-label="View Customer Churn Prediction details">
+                  <i class="fa-solid fa-eye"></i> View Case Study
+                </button>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-category-tag">Machine Learning</span>
+              <h3 class="project-title">Customer Churn Prediction</h3>
+              <p class="project-desc">
+                Supervised classification algorithm identifying subscriber churn risks with ROC-AUC evaluation and actionable retention tiers.
+              </p>
+              <div class="project-tech-tags">
+                <span>Python</span>
+                <span>Logistic Regression</span>
+                <span>ROC-AUC</span>
+                <span>Data Preprocessing</span>
+              </div>
+              <div class="project-actions">
+                <a href="#" class="btn-project-link" target="_blank" rel="noopener noreferrer" title="View GitHub Repository">
+                  <i class="fa-brands fa-github"></i> Code
+                </a>
+                <a href="#" class="btn-project-link" target="_blank" rel="noopener noreferrer" title="View Live Interactive Demo">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </a>
+                <button class="btn-project-detail open-modal-btn" aria-label="Expand project details">
+                  <i class="fa-solid fa-circle-info"></i> Details
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 6 -->
+          <article class="project-card glass-panel reveal-fade-up" data-category="web" data-project-id="6">
+            <div class="project-thumbnail thumb-gradient-6">
+              <div class="thumb-watermark"><i class="fa-solid fa-laptop-code"></i></div>
+              <div class="thumb-badge">HTML5 • CSS3 • JS</div>
+              <div class="thumb-overlay">
+                <button class="btn btn-sm btn-light open-modal-btn" aria-label="View Personal Portfolio Website details">
+                  <i class="fa-solid fa-eye"></i> View Case Study
+                </button>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-category-tag">Web</span>
+              <h3 class="project-title">Personal Portfolio Website</h3>
+              <p class="project-desc">
+                High-performance, modern responsive website engineered with vanilla web technologies, particle animations, and dark/light mode.
+              </p>
+              <div class="project-tech-tags">
+                <span>Vanilla HTML5</span>
+                <span>CSS3 Variables</span>
+                <span>JavaScript ES6+</span>
+                <span>Accessible UI</span>
+              </div>
+              <div class="project-actions">
+                <a href="#" class="btn-project-link" target="_blank" rel="noopener noreferrer" title="View GitHub Repository">
+                  <i class="fa-brands fa-github"></i> Code
+                </a>
+                <a href="#" class="btn-project-link" target="_blank" rel="noopener noreferrer" title="View Live Interactive Demo">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </a>
+                <button class="btn-project-detail open-modal-btn" aria-label="Expand project details">
+                  <i class="fa-solid fa-circle-info"></i> Details
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Details Modal -->
+    <div class="modal-backdrop" id="project-modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
+      <div class="modal-dialog glass-panel">
+        <button class="modal-close-btn" id="modal-close" aria-label="Close project modal">&times;</button>
+        <div class="modal-header">
+          <span class="modal-category" id="modal-category">Category</span>
+          <h2 class="modal-title" id="modal-title">Project Title</h2>
+        </div>
+        <div class="modal-body">
+          <div class="modal-gradient-banner" id="modal-banner">
+            <i class="fa-solid fa-chart-line" id="modal-banner-icon"></i>
+          </div>
+          <div class="modal-content-section">
+            <h4 class="modal-subtitle"><i class="fa-solid fa-circle-dot"></i> Overview & Objective</h4>
+            <p id="modal-desc" class="modal-text"></p>
+          </div>
+          <div class="modal-content-section">
+            <h4 class="modal-subtitle"><i class="fa-solid fa-trophy"></i> Key Achievements & Insights</h4>
+            <ul id="modal-highlights" class="modal-list"></ul>
+          </div>
+          <div class="modal-content-section">
+            <h4 class="modal-subtitle"><i class="fa-solid fa-layer-group"></i> Tools & Stack Used</h4>
+            <div id="modal-tags" class="project-tech-tags"></div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="#" class="btn btn-outline" id="modal-github" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-github"></i> View Source Code
+          </a>
+          <a href="#" class="btn btn-primary" id="modal-live" target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo / Dashboard
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Certifications Section -->
+    <section class="section cert-section" id="certifications">
+      <div class="container">
+        <div class="section-header reveal-fade-up">
+          <span class="section-sub">Validated Competence</span>
+          <h2 class="section-title">Certifications & Achievements</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="certs-grid">
+          <!-- Cert 1 -->
+          <div class="cert-card glass-panel reveal-fade-up">
+            <div class="cert-icon-box google-icon">
+              <i class="fa-brands fa-google"></i>
+            </div>
+            <div class="cert-info">
+              <span class="cert-issuer">Google & Coursera</span>
+              <h3 class="cert-name">Google Data Analytics Professional Certificate</h3>
+              <p class="cert-summary">Rigorous curriculum covering SQL, R programming, Tableau, spreadsheets, data cleaning, and ethics.</p>
+              <div class="cert-meta">
+                <span class="cert-status verified"><i class="fa-solid fa-circle-check"></i> Certified</span>
+                <span class="cert-year">2024</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cert 2 -->
+          <div class="cert-card glass-panel reveal-fade-up">
+            <div class="cert-icon-box ms-icon">
+              <i class="fa-brands fa-microsoft"></i>
+            </div>
+            <div class="cert-info">
+              <span class="cert-issuer">Microsoft Learn</span>
+              <h3 class="cert-name">Power BI Data Analyst (PL-300 Prep)</h3>
+              <p class="cert-summary">Advanced data modeling, Power Query transformations, DAX measure creation, and enterprise reporting.</p>
+              <div class="cert-meta">
+                <span class="cert-status in-progress"><i class="fa-solid fa-spinner"></i> Advanced Stage</span>
+                <span class="cert-year">2025</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cert 3 -->
+          <div class="cert-card glass-panel reveal-fade-up">
+            <div class="cert-icon-box sql-icon">
+              <i class="fa-solid fa-database"></i>
+            </div>
+            <div class="cert-info">
+              <span class="cert-issuer">UC Davis / Coursera</span>
+              <h3 class="cert-name">SQL for Data Science</h3>
+              <p class="cert-summary">Complex joins, subqueries, grouping, aggregations, schema design, and query optimization.</p>
+              <div class="cert-meta">
+                <span class="cert-status verified"><i class="fa-solid fa-circle-check"></i> Certified</span>
+                <span class="cert-year">2024</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cert 4 -->
+          <div class="cert-card glass-panel reveal-fade-up">
+            <div class="cert-icon-box tally-icon">
+              <i class="fa-solid fa-file-invoice-dollar"></i>
+            </div>
+            <div class="cert-info">
+              <span class="cert-issuer">Tally Education</span>
+              <h3 class="cert-name">Tally Prime Certification</h3>
+              <p class="cert-summary">Computerized accounting, GST compliance, inventory control, and financial statement generation.</p>
+              <div class="cert-meta">
+                <span class="cert-status verified"><i class="fa-solid fa-circle-check"></i> Certified</span>
+                <span class="cert-year">2024</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header reveal-fade-up">
+          <span class="section-sub">Start A Conversation</span>
+          <h2 class="section-title">Get In Touch</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Info Column -->
+          <div class="contact-info-card glass-panel reveal-fade-up">
+            <h3 class="contact-info-title">Let's discuss your next data challenge</h3>
+            <p class="contact-info-desc">
+              Whether you need financial reporting automation, a Power BI dashboard built from scratch, or an analytical intern ready to add immediate value—my inbox is open.
+            </p>
+
+            <div class="contact-methods">
+              <a href="mailto:rakesh.dummy@email.com" class="contact-method-item">
+                <div class="method-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div>
+                  <span class="method-label">Email Directly</span>
+                  <span class="method-val">rakesh.dummy@email.com</span>
+                </div>
+              </a>
+
+              <a href="tel:+919876543210" class="contact-method-item">
+                <div class="method-icon"><i class="fa-solid fa-phone"></i></div>
+                <div>
+                  <span class="method-label">Phone & WhatsApp</span>
+                  <span class="method-val">+91 98765 43210</span>
+                </div>
+              </a>
+
+              <div class="contact-method-item">
+                <div class="method-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div>
+                  <span class="method-label">Location</span>
+                  <span class="method-val">Chennai, Tamil Nadu, India</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="resume-download-box">
+              <h4>Need an offline copy of my background?</h4>
+              <p>Grab my latest curriculum vitae in PDF format.</p>
+              <div class="resume-button-pair">
+                <a href="static/resume.pdf" download="Rakesh_Resume.pdf" class="btn btn-sm btn-primary">
+                  <i class="fa-solid fa-download"></i> Download Resume
+                </a>
+                <a href="static/resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                  <i class="fa-solid fa-eye"></i> View PDF
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form Column -->
+          <div class="contact-form-card glass-panel reveal-fade-up">
+            <h3 class="form-title">Send a Direct Message</h3>
+            
+            <form id="contact-form" novalidate>
+              <div class="form-group">
+                <label for="name" class="form-label">Full Name <span class="required">*</span></label>
+                <div class="input-wrapper">
+                  <i class="fa-solid fa-user input-icon"></i>
+                  <input 
+                    type="text" 
+                    id="name" 
+                    name="name" 
+                    class="form-control" 
+                    placeholder="e.g. John Doe"
+                    required
+                    autocomplete="name"
+                  >
+                </div>
+                <span class="error-msg" id="name-error" aria-live="polite"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="email" class="form-label">Email Address <span class="required">*</span></label>
+                <div class="input-wrapper">
+                  <i class="fa-solid fa-envelope input-icon"></i>
+                  <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    class="form-control" 
+                    placeholder="e.g. john@company.com"
+                    required
+                    autocomplete="email"
+                  >
+                </div>
+                <span class="error-msg" id="email-error" aria-live="polite"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="subject" class="form-label">Subject</label>
+                <div class="input-wrapper">
+                  <i class="fa-solid fa-tag input-icon"></i>
+                  <input 
+                    type="text" 
+                    id="subject" 
+                    name="subject" 
+                    class="form-control" 
+                    placeholder="Project Inquiry, Internship, Collaboration..."
+                  >
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="message" class="form-label">Message <span class="required">*</span></label>
+                <div class="input-wrapper">
+                  <textarea 
+                    id="message" 
+                    name="message" 
+                    class="form-control textarea" 
+                    rows="5" 
+                    placeholder="Tell me about your project, timeline, or data requirements..." 
+                    required
+                  ></textarea>
+                </div>
+                <span class="error-msg" id="message-error" aria-live="polite"></span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block" id="submit-btn">
+                <span>Send Message</span>
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+
+              <!-- Form Feedback Banner -->
+              <div class="form-alert hidden" id="form-alert" role="alert"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <a href="#hero" class="brand-logo footer-logo">
+          <span class="logo-box">RK</span>
+          <span class="logo-text">Rakesh<span class="dot">.</span>analytics</span>
+        </a>
+        <p class="footer-tagline">
+          Turning messy business and finance data into clear, actionable insights.
+        </p>
+      </div>
+
+      <div class="footer-center">
+        <div class="footer-socials">
+          <a href="https://linkedin.com/in/rakesh-dummy" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-icon">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/rakesh-dummy" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social-icon">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://kaggle.com/rakeshdummy" target="_blank" rel="noopener noreferrer" aria-label="Kaggle" class="social-icon">
+            <i class="fa-brands fa-kaggle"></i>
+          </a>
+          <a href="https://x.com/rakesh_dummy" target="_blank" rel="noopener noreferrer" aria-label="Twitter/X" class="social-icon">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+          <a href="https://instagram.com/rakesh.dummy" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-icon">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+        <p class="copyright">
+          &copy; <span id="current-year"></span> Rakesh. All rights reserved. Crafted with clean HTML5, CSS3 & Vanilla JavaScript.
+        </p>
+      </div>
+
+      <div class="footer-right">
+        <a href="#hero" class="back-to-top-btn" id="footer-top-btn" aria-label="Return to top of page">
+          <i class="fa-solid fa-arrow-up"></i>
+          <span>Top</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back-to-Top Button -->
+  <button id="floating-top-btn" class="floating-top-btn" aria-label="Scroll back to top" title="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
