@@ -1,6 +1,6 @@
 /**
  * ==========================================================================
- * RAKESH PORTFOLIO JAVASCRIPT
+ * RAKESH D PORTFOLIO JAVASCRIPT
  * Modern, Modular, Accessible & Production-Ready
  * ==========================================================================
  */
@@ -156,9 +156,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // ------------------------------------------------------------------------
   const typingTarget = document.getElementById('typing-text');
   const roles = [
-    'Data Analyst',
-    'Business Intelligence Developer',
-    'Finance & Analytics Enthusiast'
+    'Financial Accounting Specialist',
+    'Data Analytics Trainee',
+    'Tax Compliance Associate',
+    'B.Com Final-Year Student'
   ];
 
   if (typingTarget) {
@@ -173,17 +174,17 @@ document.addEventListener('DOMContentLoaded', () => {
       if (isDeleting) {
         typingTarget.textContent = currentRole.substring(0, charIndex - 1);
         charIndex--;
-        typingSpeed = 50;
+        typingSpeed = 45;
       } else {
         typingTarget.textContent = currentRole.substring(0, charIndex + 1);
         charIndex++;
-        typingSpeed = 110;
+        typingSpeed = 100;
       }
 
       // If word complete, pause before deleting
       if (!isDeleting && charIndex === currentRole.length) {
         isDeleting = true;
-        typingSpeed = 1800; // Pause at end of text
+        typingSpeed = 1900; // Pause at end of text
       } else if (isDeleting && charIndex === 0) {
         isDeleting = false;
         roleIndex = (roleIndex + 1) % roles.length;
@@ -296,7 +297,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   filterBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
-      // Manage active filter button
       filterBtns.forEach((b) => {
         b.classList.remove('active');
         b.setAttribute('aria-selected', 'false');
@@ -310,7 +310,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const category = card.getAttribute('data-category');
         if (filterValue === 'all' || category === filterValue) {
           card.classList.remove('is-hidden');
-          // Smooth fade in
           card.style.opacity = '0';
           card.style.transform = 'translateY(15px)';
           setTimeout(() => {
@@ -325,7 +324,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ------------------------------------------------------------------------
-  // 10. Project Detail Modal
+  // 10. Project Detail Modal with Real Candidate Data
   // ------------------------------------------------------------------------
   const projectModal = document.getElementById('project-modal');
   const modalCloseBtn = document.getElementById('modal-close');
@@ -334,95 +333,68 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalDesc = document.getElementById('modal-desc');
   const modalHighlights = document.getElementById('modal-highlights');
   const modalTags = document.getElementById('modal-tags');
-  const modalGithub = document.getElementById('modal-github');
-  const modalLive = document.getElementById('modal-live');
   const modalBannerIcon = document.getElementById('modal-banner-icon');
 
-  // Rich metadata for projects
   const projectsData = {
     '1': {
-      title: 'Gym Revenue & Expense Dashboard',
-      category: 'Dashboards',
-      icon: 'fa-chart-pie',
-      desc: 'An automated business intelligence solution built for a real gym partnership. It integrates daily receipt logs, operating costs, trainer commission sheets, and renewal trackers into a unified reporting interface.',
+      title: 'GST Return Filing & Reconciliation Framework',
+      category: 'Tax & Corporate Compliance',
+      icon: 'fa-file-invoice',
+      desc: 'Developed and applied during practical internship at CV Associates, this structured reconciliation model cross-references client sales ledgers against official GSTR-1 outward supplies and GSTR-3B monthly summaries to avoid notices and claim full Input Tax Credit (ITC).',
       highlights: [
-        'Automated monthly P&L calculations that previously required 10+ hours of manual spreadsheet bookkeeping.',
-        'Visualized membership churn and seasonal dips, enabling owners to plan summer and new-year promotional discounts.',
-        'Formulated custom DAX measures for Revenue Per Active Member (RPAM) and Lifetime Member Value.'
+        'Executed end-to-end reconciliation between outward supply invoices and monthly portal summaries.',
+        'Eliminated mismatch errors between electronic credit ledgers and sales records.',
+        'Accelerated corporate client audit-readiness ahead of statutory due dates.'
       ],
-      tags: ['Power BI', 'Excel', 'DAX Measures', 'Financial Modeling', 'ETL'],
-      github: '#',
-      live: '#'
+      tags: ['GSTR-1', 'GSTR-3B', 'ITC Reconciliation', 'Tax Bookkeeping', 'Excel Spreadsheets']
     },
     '2': {
-      title: 'Student Canteen Demand Analysis',
-      category: 'Data Analysis',
-      icon: 'fa-chart-column',
-      desc: 'An end-to-end data investigation into dining pain points and wait times across campus cafeterias in Chennai, conducted as core market validation for Cruncit.',
+      title: 'Individual & Business ITR Preparation Pipeline',
+      category: 'Direct Taxation & Accounting',
+      icon: 'fa-calculator',
+      desc: 'A standardized documentation pipeline for assembling individual and business tax files, verifying profit and loss entries, calculating Chapter VI-A allowable deductions, and packaging audit-ready files.',
       highlights: [
-        'Gathered and cleaned 450+ verified college student responses using Pandas and NumPy.',
-        'Discovered that 72% of peak lunch congestion occurred within a narrow 25-minute window, justifying a pre-ordering platform model.',
-        'Created heatmap visualizations with Seaborn showing meal price sensitivity versus delivery distance.'
+        'Verified source documents, salary certificates (Form 16), and bank statements for individuals.',
+        'Compiled balance sheet data and business ledger statements for corporate clients.',
+        'Ensured comprehensive statutory accuracy prior to senior associate review and e-filing.'
       ],
-      tags: ['Python', 'Pandas', 'Matplotlib', 'Seaborn', 'Survey Analytics'],
-      github: '#',
-      live: '#'
+      tags: ['ITR Filing', 'Tax Deductions', 'Financial Bookkeeping', 'Client Verification']
     },
     '3': {
-      title: 'Sales Forecasting Model',
-      category: 'Machine Learning',
-      icon: 'fa-brain',
-      desc: 'A machine learning regression pipeline designed to predict future monthly store revenue using historical trends, seasonal markers, and external calendar indicators.',
+      title: 'Financial Database Querying & Aggregation Engine',
+      category: 'Data Analytics & SQL',
+      icon: 'fa-database',
+      desc: 'Developed as part of the Data Analytics Programme at Logics 360 Academy, this SQL database querying system enables fast querying, filtering, and summarization of transactional datasets for executive reporting.',
       highlights: [
-        'Engineered lag variables, rolling averages, and cyclical holiday features.',
-        'Achieved a Mean Absolute Percentage Error (MAPE) under 7.5% using Scikit-Learn linear regression and cross-validation.',
-        'Provided residual diagnostic plots to detect seasonal variance and inventory restock requirements.'
+        'Wrote structured relational queries utilizing INNER/LEFT JOINs, GROUP BY, and aggregates.',
+        'Extracted quarterly financial performance metrics and vendor payment turnaround times.',
+        'Bridged classical bookkeeping terminology with modern relational schema management.'
       ],
-      tags: ['Python', 'Scikit-Learn', 'Linear Regression', 'Feature Engineering'],
-      github: '#',
-      live: '#'
+      tags: ['SQL Queries', 'Relational Schemas', 'Logics 360 Academy', 'Data Analysis']
     },
     '4': {
-      title: 'Financial Statement Analyzer',
-      category: 'Data Analysis',
-      icon: 'fa-file-invoice',
-      desc: 'An automated financial modeling workbook that computes institutional-grade financial ratios, DuPont breakdown, liquidity metrics, and vertical/horizontal P&L comparisons.',
+      title: 'AI Prompt Engineering for Financial Workflows',
+      category: 'AI & Workflow Automation',
+      icon: 'fa-brain',
+      desc: 'Engineered specialized prompt frameworks tailored for finance and accounting workflows. Automates client communication drafting, summarizes intricate statutory tax circulars, and standardizes audit checklist routines.',
       highlights: [
-        'Built automated VBA macros that ingest standard raw ledger sheets and instantly output a 3-statement analysis dashboard.',
-        'Formulated DuPont Analysis to isolate Net Profit Margin, Asset Turnover, and Financial Leverage drivers.',
-        'Embedded automated conditional formatting checks for covenant compliance and solvency health.'
+        'Reduced routine document request drafting time through standardized prompt structures.',
+        'Synthesized official GST notification updates into concise executive summaries.',
+        'Created repeatable AI workflow templates for bookkeeping verification checks.'
       ],
-      tags: ['Advanced Excel', 'VBA Macros', 'Financial Accounting', 'DuPont Analysis'],
-      github: '#',
-      live: '#'
+      tags: ['AI Prompt Engineering', 'Process Automation', 'Documentation', 'Workflow Efficiency']
     },
     '5': {
-      title: 'Customer Churn Prediction',
-      category: 'Machine Learning',
-      icon: 'fa-user-xmark',
-      desc: 'A supervised classification algorithm identifying customer accounts exhibiting high probability of non-renewal, allowing business teams to intervene with targeted retention campaigns.',
-      highlights: [
-        'Performed outlier clipping, one-hot encoding, and feature scaling on multi-variable customer usage datasets.',
-        'Trained and evaluated Logistic Regression with ROC-AUC scoring of 0.84 on held-out test data.',
-        'Ranked feature importance to uncover that contract length and customer support call volume were leading churn indicators.'
-      ],
-      tags: ['Python', 'Logistic Regression', 'ROC-AUC', 'Classification', 'Data Prep'],
-      github: '#',
-      live: '#'
-    },
-    '6': {
-      title: 'Personal Portfolio Website',
+      title: 'Personal Professional Portfolio',
       category: 'Web Development',
       icon: 'fa-laptop-code',
-      desc: 'A modern, high-performance, responsive portfolio website built with zero dependencies to exhibit analytical projects, interactive dashboards, and domain expertise.',
+      desc: 'An ultra-responsive, accessible personal website engineered from scratch using semantic HTML5, modern CSS3 variables, and modular vanilla JavaScript to present academic milestones and professional experience.',
       highlights: [
-        'Coded from scratch using semantic HTML5, modern CSS3 variables, and modular vanilla JavaScript.',
-        'Included theme toggle with persistent storage, custom canvas background particles, and accessible modal navigation.',
-        'Achieved fluid responsive layouts across mobile, tablet, and ultra-wide displays without external CSS libraries.'
+        'Built with zero heavy frameworks or dependencies for optimal loading speed and SEO ranking.',
+        'Implemented interactive dark/light theme persistence via LocalStorage.',
+        'Engineered accessible keyboard navigation, responsive touch support, and graceful fallback avatars.'
       ],
-      tags: ['HTML5', 'CSS3 Variables', 'Vanilla JS', 'Canvas API', 'Accessible UI'],
-      github: '#',
-      live: '#'
+      tags: ['HTML5', 'CSS3 Variables', 'Vanilla JS', 'Responsive UI', 'Data-Tech Aesthetic']
     }
   };
 
@@ -450,9 +422,6 @@ document.addEventListener('DOMContentLoaded', () => {
       span.textContent = tag;
       modalTags.appendChild(span);
     });
-
-    modalGithub.setAttribute('href', data.github);
-    modalLive.setAttribute('href', data.live);
 
     // Open modal
     projectModal.classList.add('is-active');
@@ -530,7 +499,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // Live validation on blur
   if (nameInput) {
     nameInput.addEventListener('blur', () => {
       validateField(nameInput, nameError, nameInput.value.trim().length >= 2, 'Please enter your full name (at least 2 characters).');
@@ -561,7 +529,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      // Simulate sending with loading state
+      // Simulate sending with loading indicator
       const originalBtnHTML = submitBtn.innerHTML;
       submitBtn.disabled = true;
       submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> <span>Sending message...</span>';
@@ -576,20 +544,14 @@ document.addEventListener('DOMContentLoaded', () => {
           formAlert.innerHTML = `
             <i class="fa-solid fa-circle-check"></i>
             <div>
-              <strong>Thank you, ${nameInput.value.trim()}!</strong> Your message has been received. I will reply to <em>${emailInput.value.trim()}</em> shortly.
+              <strong>Thank you, ${nameInput.value.trim()}!</strong> Your message has been sent to Rakesh D. I will respond to <em>${emailInput.value.trim()}</em> as soon as possible.
             </div>
           `;
           formAlert.classList.remove('hidden');
         }
 
-        // Reset form fields
         contactForm.reset();
-
-        // Optional mailto fallback trigger in background
-        const mailSubject = encodeURIComponent(document.getElementById('subject')?.value || 'Portfolio Contact Inquiry');
-        const mailBody = encodeURIComponent(`Name: ${nameInput.value}\nEmail: ${emailInput.value}\n\n${messageInput.value}`);
-        // console.log(`Simulated mailto: mailto:rakesh.dummy@email.com?subject=${mailSubject}&body=${mailBody}`);
-      }, 1000);
+      }, 900);
     });
   }
 
@@ -658,7 +620,6 @@ document.addEventListener('DOMContentLoaded', () => {
         particles[i].update();
         particles[i].draw();
 
-        // Connect nearby points with subtle data lines
         for (let j = i + 1; j < particles.length; j++) {
           const dx = particles[i].x - particles[j].x;
           const dy = particles[i].y - particles[j].y;
